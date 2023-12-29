@@ -59,6 +59,117 @@ solu:-class Solution:
         lastWord = strList[-1]
         return len(lastWord)
 
-4)
+4)Python Program for Simple Interest
+solu:-def simple_interest(p,t,r):
+    print('The principal is', p)
+    print('The time period is', t)
+    print('The rate of interest is',r)
+     
+    si = (p * t * r)/100
+     
+    print('The Simple Interest is', si)
+    return si
+     
+# Driver code
+simple_interest(8, 6, 8)
 
+5)Python Program to Check Armstrong Number
+solu:-def power(x, y):
+     
+    if y == 0:
+        return 1
+    if y % 2 == 0:
+        return power(x, y // 2) * power(x, y // 2)
+         
+    return x * power(x, y // 2) * power(x, y // 2)
  
+def order(x):
+ 
+    n = 0
+    while (x != 0):
+        n = n + 1
+        x = x // 10
+         
+    return n
+
+def isArmstrong(x):
+     
+    n = order(x)
+    temp = x
+    sum1 = 0
+     
+    while (temp != 0):
+        r = temp % 10
+        sum1 = sum1 + power(r, n)
+        temp = temp // 10
+ 
+    return (sum1 == x)
+ 
+x = 153
+print(isArmstrong(x))
+ 
+x = 1253
+print(isArmstrong(x))
+
+6)Program to print ASCII Value of a character
+solu:-c = 'g'
+print("The ASCII value of '" + c + "' is", ord(c)) 
+ 
+7)Python Program to Find Largest Element in an Array
+solu:-def largest(arr, n):
+ 
+    max = arr[0]
+
+    for i in range(1, n):
+        if arr[i] > max:
+            max = arr[i]
+    return max
+
+arr = [10, 324, 45, 90, 9808]
+n = len(arr)
+Ans = largest(arr, n)
+print("Largest in given array ", Ans)
+
+7)Python Program to Check Prime Number
+solu:-num = 11
+if num > 1:
+   
+    for i in range(2, int(num/2)+1):
+        if (num % i) == 0:
+            print(num, "is not a prime number")
+            break
+    else:
+        print(num, "is a prime number")
+else:
+    print(num, "is not a prime number")
+
+8)Python Program to Find Area of a Circle
+solu:-def findArea(r):
+    PI = 3.142
+    return PI * (r*r);
+ 
+print("Area is %.6f" % findArea(5));
+
+9)Python Program to Find the Factorial of a Number
+solu:-def factorial(n):
+     
+    return 1 if (n==1 or n==0) else n * factorial(n - 1) 
+
+num = 5
+print("Factorial of",num,"is",factorial(num))
+
+10)Python Program to Find Sum of Array
+solu:-def _sum(arr):
+
+    sum = 0
+    for i in arr:
+        sum = sum + i
+ 
+    return(sum)
+  
+if __name__ == "__main__":
+    
+    arr = [12, 3, 4, 15]
+    n = len(arr)
+    ans = _sum(arr)
+    print('Sum of the array is ', ans)
